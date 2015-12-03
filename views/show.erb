@@ -1,0 +1,9 @@
+<% if @task %> 
+<h5>Task name: </h5>
+<p><%= @task['name'] %></p>
+
+<h5>Task details: </h5>
+<p><%= @task['details'] %></p>
+<% else %>
+<p>There's nothing here</p>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Todo App</h1>
+
+<% @tasks.each do |task| %>
+  <h5>Task name: </h5>
+  <p><%= task['name'] %></p>
+
+  <h5>Task details: </h5>
+  <p><%= task['details'] %></p>
+  <a href="/tasks/<%= task['id'] %>">Show task</a>
+
+<form action="/tasks/<%= task['id'] %>/delete" method="post">
+<input type='submit' value="Delete">
+</form>
+
+<% end %>
